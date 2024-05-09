@@ -1,14 +1,4 @@
-{
-  "cells": [
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "VjYy0F2gZIPR"
-      },
-      "outputs": [],
-      "source": [
-        # Connect GDrive
+# Connect GDrive
 from google.colab import drive
 drive.mount("/content/gdrive")
 # Install
@@ -26,23 +16,3 @@ drive.mount("/content/gdrive")
 !wget https://huggingface.co/bstungnguyen/Fooocus/resolve/main/bstunglight.json
 %cd /content/Fooocus
 !python entry_with_update.py --share --always-high-vram
-      ]
-    }
-  ],
-  "metadata": {
-    "accelerator": "GPU",
-    "colab": {
-      "gpuType": "T4",
-      "provenance": []
-    },
-    "kernelspec": {
-      "display_name": "Python 3",
-      "name": "python3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "nbformat": 4,
-  "nbformat_minor": 0
-}
