@@ -542,7 +542,7 @@ def start_training(
     if not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
 
-    download(base_model)
+ 
 
     file_type = "sh"
     if sys.platform == "win32":
