@@ -440,7 +440,7 @@ def gen_sh(
     model_config = models[base_model]
     model_file = model_config["file"]
     repo = model_config["repo"]
-    if base_model == "flux1-dev" or base_model == "flux1-schnell":
+    if base_model == "flux-dev" or base_model == "flux-schnell":
         model_folder = "/teamspace/studios/this_studio/models/unet"
     else:
         model_folder = f"models/unet/{repo}"
@@ -454,7 +454,7 @@ def gen_sh(
   --mixed_precision bf16 {line_break}
   --num_cpu_threads_per_process 1 {line_break}
   sd-scripts/flux_train_network.py {line_break}
-  --pretrained_model_name_or_path {pretrained_model_path} {line_break}
+  --pretrained_model_name_or_path /teamspace/studios/this_studio/models/unet/flux1-dev.safetensors {line_break}
   --clip_l {clip_path} {line_break}
   --t5xxl {t5_path} {line_break}
   --ae {ae_path} {line_break}
